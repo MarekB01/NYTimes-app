@@ -13,7 +13,7 @@ class Post {
     String url = jsonObject['url'];
     String summary = jsonObject['abstract'];
     List multiMediaList = jsonObject['multimedia'];
-    // We want an average-quality image or nothing
+    
     String thumbUrl = multiMediaList.length > 4? multiMediaList[3]['url'] : "";
 
     int timeStamp = DateTime.parse(jsonObject['created_date']).millisecondsSinceEpoch;
